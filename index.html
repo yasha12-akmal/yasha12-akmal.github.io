@@ -1,169 +1,459 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<title>Yasha Akmal – Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yasha Akmal – Resume</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --ink: #1a1410;
+    --rust: #b85c38;
+    --warm: #f5efe6;
+    --muted: #7a6a5a;
+    --line: #d9cfc4;
+    --accent: #c9713a;
+  }
+  @page { size: A4; margin: 0; }
+  body {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    background: var(--warm);
+    color: var(--ink);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0;
+  }
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    background: #fdfaf6;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 60px rgba(0,0,0,0.18);
+  }
+  .top-bar {
+    height: 6px;
+    background: linear-gradient(90deg, var(--rust) 0%, var(--accent) 50%, #e8a87c 100%);
+  }
+  .page::before {
+    content: '';
+    position: absolute;
+    left: 220px;
+    top: 6px;
+    bottom: 0;
+    width: 1px;
+    background: var(--line);
+    z-index: 0;
+  }
+  .layout {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    min-height: calc(297mm - 6px);
+  }
 
-		<div id="wrapper">
+  /* SIDEBAR */
+  .sidebar {
+    background: #f5ede0;
+    padding: 36px 24px 80px 28px;
+    position: relative;
+    z-index: 1;
+  }
+  .monogram {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--rust), var(--accent));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  .monogram span {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 1px;
+  }
+  .sidebar-section { margin-bottom: 26px; }
+  .sidebar-title {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--rust);
+    margin-bottom: 12px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--line);
+  }
+  .contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 9px;
+  }
+  .contact-icon { font-size: 10px; margin-top: 3px; color: var(--rust); flex-shrink: 0; }
+  .contact-text {
+    font-size: 11px;
+    line-height: 1.5;
+    color: var(--ink);
+    font-weight: 300;
+    word-break: break-all;
+  }
+  .skill-group { margin-bottom: 12px; }
+  .skill-tag {
+    display: inline-block;
+    font-size: 10.5px;
+    font-weight: 400;
+    color: var(--ink);
+    background: rgba(184, 92, 56, 0.1);
+    border: 1px solid rgba(184, 92, 56, 0.25);
+    border-radius: 2px;
+    padding: 2px 7px;
+    margin: 2px 2px 2px 0;
+    line-height: 1.6;
+  }
+  .software-list {
+    font-size: 10.5px;
+    font-weight: 300;
+    color: var(--muted);
+    line-height: 1.9;
+    font-family: 'DM Mono', monospace;
+  }
 
-				<header id="header" class="alt">
-						<span class="logo"><img src="images/logo.svg" alt="" /></span>
-						<h1>Yasha Akmal</h1>
-						<p>Computer Science Student at Fatima Jinnah Women University<br />
-						Focused on Software Development & Systems Programming</p>
-					</header>
+  /* MAIN */
+  .main {
+    padding: 36px 36px 80px 32px;
+    position: relative;
+    z-index: 1;
+  }
+  .name-block {
+    margin-bottom: 28px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--ink);
+    position: relative;
+  }
+  .name-block::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 60px;
+    height: 2px;
+    background: var(--rust);
+  }
+  h1 {
+    font-size: 38px;
+    font-weight: 300;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    line-height: 1;
+    color: var(--ink);
+    margin-bottom: 5px;
+  }
+  h1 em {
+    font-style: italic;
+    font-weight: 600;
+    color: var(--rust);
+  }
+  .tagline {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 2px;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+  .section { margin-bottom: 24px; }
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+  .section-num {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    color: var(--rust);
+    letter-spacing: 1px;
+  }
+  .section-title {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--ink);
+  }
+  .section-line { flex: 1; height: 1px; background: var(--line); }
+  .objective-text {
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 1.85;
+    color: var(--ink);
+    font-style: italic;
+    padding-left: 14px;
+    border-left: 3px solid var(--rust);
+  }
+  .edu-entry {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 8px;
+    margin-bottom: 13px;
+    padding-bottom: 13px;
+    border-bottom: 1px dashed var(--line);
+  }
+  .edu-entry:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .edu-degree { font-size: 13.5px; font-weight: 600; color: var(--ink); margin-bottom: 2px; }
+  .edu-school { font-size: 11.5px; font-weight: 300; color: var(--muted); font-style: italic; }
+  .edu-badge {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    color: var(--rust);
+    background: rgba(184,92,56,0.08);
+    border: 1px solid rgba(184,92,56,0.2);
+    padding: 3px 8px;
+    border-radius: 2px;
+    white-space: nowrap;
+    align-self: flex-start;
+    margin-top: 2px;
+  }
+  .edu-note {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    color: var(--accent);
+    margin-top: 4px;
+  }
+  .project-entry {
+    margin-bottom: 20px;
+    padding-left: 12px;
+    border-left: 2px solid var(--line);
+  }
+  .project-name { font-size: 14px; font-weight: 600; color: var(--ink); margin-bottom: 5px; }
+  .project-desc { font-size: 12.5px; font-weight: 300; line-height: 1.8; color: var(--muted); }
+  .project-tech { margin-top: 7px; display: flex; flex-wrap: wrap; gap: 6px; }
+  .tech-pill {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    color: var(--rust);
+    border: 1px solid rgba(184,92,56,0.3);
+    padding: 2px 8px;
+    border-radius: 10px;
+  }
+  .resume-footer {
+    position: absolute;
+    bottom: 18px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 36px 0 28px;
+  }
+  .footer-text {
+    font-family: 'DM Mono', monospace;
+    font-size: 8px;
+    color: var(--line);
+    letter-spacing: 1px;
+  }
+  .footer-dot { width: 4px; height: 4px; border-radius: 50%; background: var(--rust); opacity: 0.4; }
+  @media print {
+    body { padding: 0; background: white; }
+    .page { box-shadow: none; width: 210mm; min-height: 297mm; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="top-bar"></div>
+  <div class="layout">
 
-				<nav id="nav">
-						<ul>
-							<li><a href="#intro" class="active">Objective</a></li>
-							<li><a href="#first">Education</a></li>
-							<li><a href="#second">Projects</a></li>
-							<li><a href="#skills">Skills</a></li>
-						</ul>
-					</nav>
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="monogram"><span>YA</span></div>
 
-				<div id="main">
+      <div class="sidebar-section">
+        <div class="sidebar-title">Contact</div>
+        <div class="contact-item">
+          <span class="contact-icon">✉</span>
+          <span class="contact-text">yashaakmal33@gmail.com</span>
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon">☏</span>
+          <span class="contact-text">03175031474</span>
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon">◉</span>
+          <span class="contact-text">Pakistan</span>
+        </div>
+      </div>
 
-						<section id="intro" class="main">
-								<div class="spotlight">
-									<div class="content">
-										<header class="major">
-											<h2>Professional Objective</h2>
-										</header>
-										<p>A motivated Computer Science student with a strong academic foundation and hands-on experience with industry tools. Passionate about solving real-world problems through technology, eager to apply classroom knowledge in practical settings, and committed to growing as a software developer.</p>
-									</div>
-									<span class="image"><img src="images/pic01.jpg" alt="" /></span>
-								</div>
-							</section>
+      <div class="sidebar-section">
+        <div class="sidebar-title">Languages</div>
+        <div class="skill-group">
+          <div class="skill-tag">English</div>
+          <div class="skill-tag">Urdu</div>
+        </div>
+      </div>
 
-						<section id="first" class="main special">
-								<header class="major">
-									<h2>Education</h2>
-								</header>
-								<ul class="features">
-									<li>
-										<span class="icon solid major style1 fa-university"></span>
-										<h3>BS Computer Science</h3>
-										<p>Fatima Jinnah Women University<br />
-										Currently enrolled &middot; 4th Semester<br />
-										2024 – 2028</p>
-									</li>
-									<li>
-										<span class="icon major style3 fa-graduation-cap"></span>
-										<h3>Intermediate</h3>
-										<p>Superior College<br />
-										Completed</p>
-									</li>
-									<li>
-										<span class="icon major style5 fa-book"></span>
-										<h3>Matriculation</h3>
-										<p>Toddlers Shine High School<br />
-										Completed</p>
-									</li>
-								</ul>
-							</section>
+      <div class="sidebar-section">
+        <div class="sidebar-title">Programming</div>
+        <div class="skill-group">
+          <div class="skill-tag">C++</div>
+          <div class="skill-tag">Java</div>
+          <div class="skill-tag">Python</div>
+          <div class="skill-tag">Assembly</div>
+        </div>
+      </div>
 
-						<section id="second" class="main special">
-								<header class="major">
-									<h2>Academic Projects</h2>
-									<p>Showcasing technical implementation across different domains and languages.</p>
-								</header>
-								<ul class="statistics">
-									<li class="style1">
-										<span class="icon solid fa-heartbeat"></span>
-										<strong>Arduino</strong> Heart Monitor
-									</li>
-									<li class="style2">
-										<span class="icon solid fa-calculator"></span>
-										<strong>Assembly</strong> Binary Calc
-									</li>
-									<li class="style3">
-										<span class="icon solid fa-search"></span>
-										<strong>C++</strong> Mini Google
-									</li>
-									<li class="style4">
-										<span class="icon solid fa-gamepad"></span>
-										<strong>Java</strong> Hangman Game
-									</li>
-								</ul>
-								<footer class="major">
-									<p>Projects include real-time pulse monitoring using Arduino, low-level memory management in x86 Assembly, and advanced data structures for search engine simulation.</p>
-								</footer>
-							</section>
+      <div class="sidebar-section">
+        <div class="sidebar-title">Core Knowledge</div>
+        <div class="skill-group">
+          <div class="skill-tag">OOP</div>
+          <div class="skill-tag">Data Structures</div>
+          <div class="skill-tag">DBMS</div>
+          <div class="skill-tag">Computer Networks</div>
+          <div class="skill-tag">Digital Logic Design</div>
+          <div class="skill-tag">AI Fundamentals</div>
+          <div class="skill-tag">COAL</div>
+        </div>
+      </div>
 
-						<section id="skills" class="main special">
-								<header class="major">
-									<h2>Technical Expertise</h2>
-								</header>
-								<div class="table-wrapper">
-									<table>
-										<thead>
-											<tr>
-												<th>Category</th>
-												<th>Technologies & Tools</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td><strong>Programming</strong></td>
-												<td>C++, Java, Python, Assembly (x86)</td>
-											</tr>
-											<tr>
-												<td><strong>Core Knowledge</strong></td>
-												<td>OOP, Data Structures, DBMS, AI Fundamentals, COAL</td>
-											</tr>
-											<tr>
-												<td><strong>Software/Tools</strong></td>
-												<td>Cisco Packet Tracer, Oracle DB, VS Code, Tinkercad</td>
-											</tr>
-											<tr>
-												<td><strong>Soft Skills</strong></td>
-												<td>Problem Solving, Project Management, Attention to Detail</td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
-							</section>
+      <div class="sidebar-section">
+        <div class="sidebar-title">Tools & Software</div>
+        <div class="software-list">
+          Cisco Packet Tracer<br>
+          Tinkercad<br>
+          Oracle DB<br>
+          Eclipse IDE<br>
+          VS Code<br>
+          Anaconda Navigator
+        </div>
+      </div>
 
-					</div>
+      <div class="sidebar-section">
+        <div class="sidebar-title">Soft Skills</div>
+        <div class="skill-tag">Team Player</div>
+        <div class="skill-tag">Attention to Detail</div>
+        <div class="skill-tag">Problem Solving</div>
+        <div class="skill-tag">Project Management</div>
+        <div class="skill-tag">Quick Learner</div>
+      </div>
+    </aside>
 
-				<footer id="footer">
-						<section>
-							<h2>Reach Out</h2>
-							<p>I am eager to apply my technical knowledge in practical settings and collaborate on innovative software projects.</p>
-						</section>
-						<section>
-							<h2>Contact Details</h2>
-							<dl class="alt">
-								<dt>Location</dt>
-								<dd>Pakistan</dd>
-								<dt>Phone</dt>
-								<dd>03175031474</dd>
-								<dt>Email</dt>
-								<dd><a href="mailto:yashaakmal33@gmail.com">yashaakmal33@gmail.com</a></dd>
-							</dl>
-							<ul class="icons">
-								<li><a href="#" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
-								<li><a href="#" class="icon brands fa-linkedin alt"><span class="label">LinkedIn</span></a></li>
-							</ul>
-						</section>
-						<p class="copyright">&copy; Yasha Akmal. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
-					</footer>
+    <!-- MAIN CONTENT -->
+    <main class="main">
 
-			</div>
+      <div class="name-block">
+        <h1>Yasha <em>Akmal</em></h1>
+        <div class="tagline">Computer Science Student &nbsp;·&nbsp; Fatima Jinnah Women University</div>
+      </div>
 
-		<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+      <!-- OBJECTIVE -->
+      <div class="section">
+        <div class="section-header">
+          <span class="section-num">01</span>
+          <span class="section-title">Objective</span>
+          <div class="section-line"></div>
+        </div>
+        <p class="objective-text">
+          A motivated Computer Science student with a strong academic foundation and hands-on experience with industry tools. Passionate about solving real-world problems through technology, eager to apply classroom knowledge in practical settings, and committed to growing as a software developer.
+        </p>
+      </div>
 
-	</body>
+      <!-- EDUCATION -->
+      <div class="section">
+        <div class="section-header">
+          <span class="section-num">02</span>
+          <span class="section-title">Education</span>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="edu-entry">
+          <div>
+            <div class="edu-degree">BS Computer Science</div>
+            <div class="edu-school">Fatima Jinnah Women University</div>
+            <div class="edu-note">▸ Currently enrolled · 4th Semester</div>
+          </div>
+          <div class="edu-badge">2024 – 2028</div>
+        </div>
+
+        <div class="edu-entry">
+          <div>
+            <div class="edu-degree">Intermediate</div>
+            <div class="edu-school">Superior College</div>
+          </div>
+          <div class="edu-badge">Completed</div>
+        </div>
+
+        <div class="edu-entry">
+          <div>
+            <div class="edu-degree">Matriculation</div>
+            <div class="edu-school">Toddlers Shine High School</div>
+          </div>
+          <div class="edu-badge">Completed</div>
+        </div>
+      </div>
+
+      <!-- PROJECTS -->
+      <div class="section">
+        <div class="section-header">
+          <span class="section-num">03</span>
+          <span class="section-title">Academic Projects</span>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="project-entry">
+          <div class="project-name">Heart Rate Monitor using Arduino [DLD]</div>
+          <div class="project-desc">Developed a real-time pulse monitoring system using hardware sensors and Arduino. Focused on signal processing and circuit logic to display accurate heart rate data.</div>
+          <div class="project-tech">
+            <span class="tech-pill">Arduino</span>
+            <span class="tech-pill">Microcontrollers</span>
+            <span class="tech-pill">Sensors</span>
+            <span class="tech-pill">Embedded Systems</span>
+          </div>
+        </div>
+
+        <div class="project-entry">
+          <div class="project-name">Binary Calculator [COAL]</div>
+          <div class="project-desc">Designed and implemented a functional calculator using Assembly Language. Supports binary arithmetic, logical operations, and low-level memory management.</div>
+          <div class="project-tech">
+            <span class="tech-pill">Assembly (x86)</span>
+            <span class="tech-pill">EMU8086</span>
+            <span class="tech-pill">Low-level Prog.</span>
+          </div>
+        </div>
+
+        <div class="project-entry">
+          <div class="project-name">Mini Google Pro v2.0 – Integrated Search Engine [DSA]</div>
+          <div class="project-desc">A sophisticated search engine simulation utilizing advanced data structures for indexing and rapid retrieval. Features keyword optimization and ranked results.</div>
+          <div class="project-tech">
+            <span class="tech-pill">C++</span>
+            <span class="tech-pill">Data Structures</span>
+            <span class="tech-pill">Algorithms</span>
+          </div>
+        </div>
+
+        <div class="project-entry">
+          <div class="project-name">Hangman Game Program [OOP]</div>
+          <div class="project-desc">Built an interactive word-guessing game applying core OOP principles like encapsulation and inheritance. Includes dynamic word lists and score tracking.</div>
+          <div class="project-tech">
+            <span class="tech-pill">Java</span>
+            <span class="tech-pill">OOP</span>
+            <span class="tech-pill">Eclipse IDE</span>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <div class="resume-footer">
+    <span class="footer-text">YASHA AKMAL &nbsp;·&nbsp; RESUME 2025</span>
+    <span class="footer-dot"></span>
+    <span class="footer-text">yashaakmal33@gmail.com</span>
+  </div>
+</div>
+</body>
 </html>
