@@ -5,149 +5,131 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yasha Akmal - Resume</title>
     <style>
+        :root {
+            --sidebar-bg: #f8f9fa;
+            --main-text: #333;
+            --accent: #2c3e50;
+        }
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f4f4f4;
-        }
-        header {
-            text-align: center;
-            background: #2c3e50;
-            color: #fff;
-            padding: 20px 0;
-            margin-bottom: 20px;
-        }
-        h1, h2, h3 {
-            margin-top: 0;
-        }
-        section {
-            background: #fff;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        .contact-info {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
             display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            font-size: 0.9em;
+            color: var(--main-text);
+            line-height: 1.4;
         }
-        .grid-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
+        /* Sidebar Styles */
+        .sidebar {
+            width: 30%;
+            background-color: var(--sidebar-bg);
+            padding: 40px 25px;
+            min-height: 100vh;
+            border-right: 1px solid #ddd;
         }
-        .project {
-            margin-bottom: 15px;
-            border-left: 4px solid #2c3e50;
-            padding-left: 10px;
+        .initials-box {
+            background: var(--accent);
+            color: white;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 1.1em;
+            border-bottom: 2px solid var(--accent);
+            margin-top: 30px;
+            padding-bottom: 5px;
+        }
+        /* Main Content Styles */
+        .main-content {
+            width: 70%;
+            padding: 40px;
+        }
+        .header h1 {
+            font-size: 2.5em;
+            margin: 0;
+            letter-spacing: 2px;
+        }
+        .header p {
+            color: #666;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+        .section-title {
+            font-weight: bold;
+            color: var(--accent);
+            margin-top: 25px;
+            display: block;
+        }
+        .project-item {
+            margin-bottom: 20px;
+        }
+        .project-title {
+            font-weight: bold;
+            display: block;
         }
         ul {
-            padding-left: 20px;
+            padding-left: 18px;
+            margin: 5px 0;
+        }
+        .edu-item {
+            margin-bottom: 15px;
         }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>YASHA AKMAL</h1>
-    <p>COMPUTER SCIENCE STUDENT</p>
-    <div class="contact-info">
-        <span>Email: yashaakmaly3@gmail.com</span>
-        <span>Phone: 03175031474</span>
-        <span>Location: Pakistan</span>
+    <div class="sidebar">
+        <div class="initials-box">YA</div> <h2>CONTACT</h2> <p>yashaakmaly3@gmail.com</p> <p>03175031474</p> <p>Pakistan</p> <h2>LANGUAGES</h2> <ul>
+            <li>English</li> <li>Urdu</li> </ul>
+
+        <h2>PROGRAMMING</h2> <ul>
+            <li>C</li> <li>Java</li> <li>Assembly</li> <li>Python</li> </ul>
+
+        <h2>TOOLS & SOFTWARE</h2> <ul>
+            <li>Cisco Packet Tracer</li> <li>Tinkercad</li> <li>Oracle DB</li> <li>Eclipse IDE</li> <li>VS Code</li> <li>Anaconda Navigator</li> </ul>
+
+        <h2>SOFT SKILLS</h2> <ul>
+            <li>Team Player</li> <li>Attention to Detail</li> <li>Problem Solving</li> <li>Project Management</li> <li>Quick Learner</li> </ul>
     </div>
-</header>
 
-<section>
-    <h2>01 OBJECTIVE</h2>
-    <p>A motivated Computer Science student with a strong academic foundation and hands-on experience with industry tools. Passionate about solving real-world problems through technology, eager to apply classroom knowledge in practical settings, and committed to growing as a software developer.</p>
-</section>
+    <div class="main-content">
+        <div class="header">
+            <h1>YASHA AKMAL</h1> <p>COMPUTER SCIENCE STUDENT | FATIMA JINNAH WOMEN UNIVERSITY</p> </div>
 
-<div class="grid-container">
-    <section>
-        <h2>02 EDUCATION</h2>
-        <div>
-            <h3>BS Computer Science</h3>
-            <p>Fatima Jinnah Women University</p>
-            <p><em>Currently enrolled (4th Semester) | 2024 - 2028</em></p>
+        <span class="section-title">01 OBJECTIVE</span> <p>A motivated Computer Science student with a strong academic foundation and hands-on experience with industry tools. [cite: 11] Passionate about solving real-world problems through technology, eager to apply classroom knowledge in practical settings, and committed to growing as a software developer. [cite: 12]</p>
+
+        <span class="section-title">02 EDUCATION</span> <div class="edu-item">
+            <strong>BS Computer Science</strong> | 2024 - 2028<br> Fatima Jinnah Women University (Currently enrolled 4th Semester) </div>
+        <div class="edu-item">
+            <strong>Intermediate</strong> (Completed)<br> Superior College
         </div>
-        <hr>
-        <div>
-            <h3>Intermediate</h3>
-            <p>Superior College (Completed)</p>
+        <div class="edu-item">
+            <strong>Matriculation</strong> (Completed)<br> Toddlers Shine High School
         </div>
-        <hr>
-        <div>
-            <h3>Matriculation</h3>
-            <p>Toddlers Shine High School (Completed)</p>
+
+        <span class="section-title">CORE KNOWLEDGE</span> <ul>
+            <li>Data Structures, DBMS, Computer Networks</li> <li>Digital Logic Design, AI Fundamentals, COAL</li> </ul>
+
+        <span class="section-title">03 ACADEMIC PROJECTS</span> <div class="project-item">
+            <span class="project-title">Mini Google Pro v2.0 - Integrated Search Engine [DSA]</span> <p>A sophisticated search engine simulation utilizing advanced data structures for indexing and rapid retrieval. Features keyword optimization and ranked results. [cite: 49]</p>
         </div>
-    </section>
 
-    <section>
-        <h2>SKILLS & LANGUAGES</h2>
-        <h3>Programming</h3>
-        <ul>
-            <li>C, Java, Python, Assembly</li>
-        </ul>
-        <h3>Languages</h3>
-        <ul>
-            <li>English, Urdu</li>
-        </ul>
-        <h3>Soft Skills</h3>
-        <ul>
-            <li>Team Player, Attention to Detail, Problem Solving, Project Management, Quick Learner</li>
-        </ul>
-    </section>
-</div>
-
-<section>
-    <h2>03 ACADEMIC PROJECTS</h2>
-    
-    <div class="project">
-        <h3>Mini Google Pro v2.0 - Integrated Search Engine [DSA]</h3>
-        <p>A sophisticated search engine simulation utilizing advanced data structures for indexing and rapid retrieval. Features keyword optimization and ranked results.</p>
-    </div>
-
-    <div class="project">
-        <h3>Heart Rate Monitor using Arduino [DLD]</h3>
-        <p>Developed a real-time pulse monitoring system using hardware sensors and Arduino. Focused on signal processing and circuit logic to display accurate heart rate data.</p>
-    </div>
-
-    <div class="project">
-        <h3>Binary Calculator [COAL]</h3>
-        <p>Designed and implemented a functional calculator using Assembly Language. Supports binary arithmetic, logical operations, and low-level memory management.</p>
-    </div>
-
-    <div class="project">
-        <h3>Hangman Game Program [OOP]</h3>
-        <p>Built an interactive word-guessing game applying core OOP principles like encapsulation and inheritance. Includes dynamic word lists and score tracking.</p>
-    </div>
-</section>
-
-<section>
-    <div class="grid-container">
-        <div>
-            <h2>CORE KNOWLEDGE</h2>
-            <ul>
-                <li>Data Structures, DBMS, Computer Networks</li>
-                <li>Digital Logic Design, AI Fundamentals, COAL</li>
-            </ul>
+        <div class="project-item">
+            <span class="project-title">Heart Rate Monitor using Arduino [DLD]</span> <p>Developed a real-time pulse monitoring system using hardware sensors and Arduino. Focused on signal processing and circuit logic to display accurate heart rate data. [cite: 37, 38]</p>
         </div>
-        <div>
-            <h2>TOOLS & SOFTWARE</h2>
-            <ul>
-                <li>Cisco Packet Tracer, Tinkercad, Oracle DB</li>
-                <li>Eclipse IDE, VS Code, Anaconda Navigator</li>
-            </ul>
+
+        <div class="project-item">
+            <span class="project-title">Binary Calculator [COAL]</span> <p>Designed and implemented a functional calculator using Assembly Language. Supports binary arithmetic, logical operations, and low-level memory management. [cite: 47]</p>
+        </div>
+
+        <div class="project-item">
+            <span class="project-title">Hangman Game Program [OOP]</span> <p>Built an interactive word-guessing game applying core OOP principles like encapsulation and inheritance. Includes dynamic word lists and score tracking. [cite: 59]</p>
         </div>
     </div>
-</section>
 
 </body>
 </html>
