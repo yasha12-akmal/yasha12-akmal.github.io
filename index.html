@@ -1,169 +1,153 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<title>Yasha Akmal – Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yasha Akmal - Resume</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        header {
+            text-align: center;
+            background: #2c3e50;
+            color: #fff;
+            padding: 20px 0;
+            margin-bottom: 20px;
+        }
+        h1, h2, h3 {
+            margin-top: 0;
+        }
+        section {
+            background: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .contact-info {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            font-size: 0.9em;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .project {
+            margin-bottom: 15px;
+            border-left: 4px solid #2c3e50;
+            padding-left: 10px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
 
-		<div id="wrapper">
+<header>
+    <h1>YASHA AKMAL</h1>
+    <p>COMPUTER SCIENCE STUDENT</p>
+    <div class="contact-info">
+        <span>Email: yashaakmaly3@gmail.com</span>
+        <span>Phone: 03175031474</span>
+        <span>Location: Pakistan</span>
+    </div>
+</header>
 
-				<header id="header" class="alt">
-						<span class="logo"><img src="images/logo.svg" alt="" /></span>
-						<h1>Yasha Akmal</h1>
-						<p>Computer Science Student at Fatima Jinnah Women University<br />
-						Focused on Software Development & Systems Programming</p>
-					</header>
+<section>
+    <h2>01 OBJECTIVE</h2>
+    <p>A motivated Computer Science student with a strong academic foundation and hands-on experience with industry tools. Passionate about solving real-world problems through technology, eager to apply classroom knowledge in practical settings, and committed to growing as a software developer.</p>
+</section>
 
-				<nav id="nav">
-						<ul>
-							<li><a href="#intro" class="active">Objective</a></li>
-							<li><a href="#first">Education</a></li>
-							<li><a href="#second">Projects</a></li>
-							<li><a href="#skills">Skills</a></li>
-						</ul>
-					</nav>
+<div class="grid-container">
+    <section>
+        <h2>02 EDUCATION</h2>
+        <div>
+            <h3>BS Computer Science</h3>
+            <p>Fatima Jinnah Women University</p>
+            <p><em>Currently enrolled (4th Semester) | 2024 - 2028</em></p>
+        </div>
+        <hr>
+        <div>
+            <h3>Intermediate</h3>
+            <p>Superior College (Completed)</p>
+        </div>
+        <hr>
+        <div>
+            <h3>Matriculation</h3>
+            <p>Toddlers Shine High School (Completed)</p>
+        </div>
+    </section>
 
-				<div id="main">
+    <section>
+        <h2>SKILLS & LANGUAGES</h2>
+        <h3>Programming</h3>
+        <ul>
+            <li>C, Java, Python, Assembly</li>
+        </ul>
+        <h3>Languages</h3>
+        <ul>
+            <li>English, Urdu</li>
+        </ul>
+        <h3>Soft Skills</h3>
+        <ul>
+            <li>Team Player, Attention to Detail, Problem Solving, Project Management, Quick Learner</li>
+        </ul>
+    </section>
+</div>
 
-						<section id="intro" class="main">
-								<div class="spotlight">
-									<div class="content">
-										<header class="major">
-											<h2>Professional Objective</h2>
-										</header>
-										<p>A motivated Computer Science student with a strong academic foundation and hands-on experience with industry tools. Passionate about solving real-world problems through technology, eager to apply classroom knowledge in practical settings, and committed to growing as a software developer.</p>
-									</div>
-									<span class="image"><img src="images/pic01.jpg" alt="" /></span>
-								</div>
-							</section>
+<section>
+    <h2>03 ACADEMIC PROJECTS</h2>
+    
+    <div class="project">
+        <h3>Mini Google Pro v2.0 - Integrated Search Engine [DSA]</h3>
+        <p>A sophisticated search engine simulation utilizing advanced data structures for indexing and rapid retrieval. Features keyword optimization and ranked results.</p>
+    </div>
 
-						<section id="first" class="main special">
-								<header class="major">
-									<h2>Education</h2>
-								</header>
-								<ul class="features">
-									<li>
-										<span class="icon solid major style1 fa-university"></span>
-										<h3>BS Computer Science</h3>
-										<p>Fatima Jinnah Women University<br />
-										Currently enrolled &middot; 4th Semester<br />
-										2024 – 2028</p>
-									</li>
-									<li>
-										<span class="icon major style3 fa-graduation-cap"></span>
-										<h3>Intermediate</h3>
-										<p>Superior College<br />
-										Completed</p>
-									</li>
-									<li>
-										<span class="icon major style5 fa-book"></span>
-										<h3>Matriculation</h3>
-										<p>Toddlers Shine High School<br />
-										Completed</p>
-									</li>
-								</ul>
-							</section>
+    <div class="project">
+        <h3>Heart Rate Monitor using Arduino [DLD]</h3>
+        <p>Developed a real-time pulse monitoring system using hardware sensors and Arduino. Focused on signal processing and circuit logic to display accurate heart rate data.</p>
+    </div>
 
-						<section id="second" class="main special">
-								<header class="major">
-									<h2>Academic Projects</h2>
-									<p>Showcasing technical implementation across different domains and languages.</p>
-								</header>
-								<ul class="statistics">
-									<li class="style1">
-										<span class="icon solid fa-heartbeat"></span>
-										<strong>Arduino</strong> Heart Monitor
-									</li>
-									<li class="style2">
-										<span class="icon solid fa-calculator"></span>
-										<strong>Assembly</strong> Binary Calc
-									</li>
-									<li class="style3">
-										<span class="icon solid fa-search"></span>
-										<strong>C++</strong> Mini Google
-									</li>
-									<li class="style4">
-										<span class="icon solid fa-gamepad"></span>
-										<strong>Java</strong> Hangman Game
-									</li>
-								</ul>
-								<footer class="major">
-									<p>Projects include real-time pulse monitoring using Arduino, low-level memory management in x86 Assembly, and advanced data structures for search engine simulation.</p>
-								</footer>
-							</section>
+    <div class="project">
+        <h3>Binary Calculator [COAL]</h3>
+        <p>Designed and implemented a functional calculator using Assembly Language. Supports binary arithmetic, logical operations, and low-level memory management.</p>
+    </div>
 
-						<section id="skills" class="main special">
-								<header class="major">
-									<h2>Technical Expertise</h2>
-								</header>
-								<div class="table-wrapper">
-									<table>
-										<thead>
-											<tr>
-												<th>Category</th>
-												<th>Technologies & Tools</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td><strong>Programming</strong></td>
-												<td>C++, Java, Python, Assembly (x86)</td>
-											</tr>
-											<tr>
-												<td><strong>Core Knowledge</strong></td>
-												<td>OOP, Data Structures, DBMS, AI Fundamentals, COAL</td>
-											</tr>
-											<tr>
-												<td><strong>Software/Tools</strong></td>
-												<td>Cisco Packet Tracer, Oracle DB, VS Code, Tinkercad</td>
-											</tr>
-											<tr>
-												<td><strong>Soft Skills</strong></td>
-												<td>Problem Solving, Project Management, Attention to Detail</td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
-							</section>
+    <div class="project">
+        <h3>Hangman Game Program [OOP]</h3>
+        <p>Built an interactive word-guessing game applying core OOP principles like encapsulation and inheritance. Includes dynamic word lists and score tracking.</p>
+    </div>
+</section>
 
-					</div>
+<section>
+    <div class="grid-container">
+        <div>
+            <h2>CORE KNOWLEDGE</h2>
+            <ul>
+                <li>Data Structures, DBMS, Computer Networks</li>
+                <li>Digital Logic Design, AI Fundamentals, COAL</li>
+            </ul>
+        </div>
+        <div>
+            <h2>TOOLS & SOFTWARE</h2>
+            <ul>
+                <li>Cisco Packet Tracer, Tinkercad, Oracle DB</li>
+                <li>Eclipse IDE, VS Code, Anaconda Navigator</li>
+            </ul>
+        </div>
+    </div>
+</section>
 
-				<footer id="footer">
-						<section>
-							<h2>Reach Out</h2>
-							<p>I am eager to apply my technical knowledge in practical settings and collaborate on innovative software projects.</p>
-						</section>
-						<section>
-							<h2>Contact Details</h2>
-							<dl class="alt">
-								<dt>Location</dt>
-								<dd>Pakistan</dd>
-								<dt>Phone</dt>
-								<dd>03175031474</dd>
-								<dt>Email</dt>
-								<dd><a href="mailto:yashaakmal33@gmail.com">yashaakmal33@gmail.com</a></dd>
-							</dl>
-							<ul class="icons">
-								<li><a href="#" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
-								<li><a href="#" class="icon brands fa-linkedin alt"><span class="label">LinkedIn</span></a></li>
-							</ul>
-						</section>
-						<p class="copyright">&copy; Yasha Akmal. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
-					</footer>
-
-			</div>
-
-		<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+</body>
 </html>
