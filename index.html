@@ -1,230 +1,169 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yasha Akmal | Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg: #0f172a;
-            --card-bg: rgba(30, 41, 59, 0.7);
-            --accent: #38bdf8;
-            --text-main: #f1f5f9;
-            --text-dim: #94a3b8;
-        }
+	<head>
+		<title>Yasha Akmal – Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
 
-        * { box-sizing: border-box; margin: 0; padding: 0; }
+		<div id="wrapper">
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--bg);
-            background-image: radial-gradient(circle at 50% 50%, #1e293b 0%, #0f172a 100%);
-            color: var(--text-main);
-            line-height: 1.6;
-            padding: 40px 20px;
-        }
+				<header id="header" class="alt">
+						<span class="logo"><img src="images/logo.svg" alt="" /></span>
+						<h1>Yasha Akmal</h1>
+						<p>Computer Science Student at Fatima Jinnah Women University<br />
+						Focused on Software Development & Systems Programming</p>
+					</header>
 
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-        }
+				<nav id="nav">
+						<ul>
+							<li><a href="#intro" class="active">Objective</a></li>
+							<li><a href="#first">Education</a></li>
+							<li><a href="#second">Projects</a></li>
+							<li><a href="#skills">Skills</a></li>
+						</ul>
+					</nav>
 
-        /* Profile Header */
-        header {
-            text-align: center;
-            margin-bottom: 60px;
-        }
+				<div id="main">
 
-        h1 {
-            font-size: 3rem;
-            font-weight: 600;
-            background: linear-gradient(to right, #38bdf8, #818cf8);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 10px;
-        }
+						<section id="intro" class="main">
+								<div class="spotlight">
+									<div class="content">
+										<header class="major">
+											<h2>Professional Objective</h2>
+										</header>
+										<p>A motivated Computer Science student with a strong academic foundation and hands-on experience with industry tools. Passionate about solving real-world problems through technology, eager to apply classroom knowledge in practical settings, and committed to growing as a software developer.</p>
+									</div>
+									<span class="image"><img src="images/pic01.jpg" alt="" /></span>
+								</div>
+							</section>
 
-        .tagline {
-            color: var(--text-dim);
-            font-size: 1.1rem;
-            letter-spacing: 1px;
-        }
+						<section id="first" class="main special">
+								<header class="major">
+									<h2>Education</h2>
+								</header>
+								<ul class="features">
+									<li>
+										<span class="icon solid major style1 fa-university"></span>
+										<h3>BS Computer Science</h3>
+										<p>Fatima Jinnah Women University<br />
+										Currently enrolled &middot; 4th Semester<br />
+										2024 – 2028</p>
+									</li>
+									<li>
+										<span class="icon major style3 fa-graduation-cap"></span>
+										<h3>Intermediate</h3>
+										<p>Superior College<br />
+										Completed</p>
+									</li>
+									<li>
+										<span class="icon major style5 fa-book"></span>
+										<h3>Matriculation</h3>
+										<p>Toddlers Shine High School<br />
+										Completed</p>
+									</li>
+								</ul>
+							</section>
 
-        /* Sections */
-        section { margin-bottom: 50px; }
+						<section id="second" class="main special">
+								<header class="major">
+									<h2>Academic Projects</h2>
+									<p>Showcasing technical implementation across different domains and languages.</p>
+								</header>
+								<ul class="statistics">
+									<li class="style1">
+										<span class="icon solid fa-heartbeat"></span>
+										<strong>Arduino</strong> Heart Monitor
+									</li>
+									<li class="style2">
+										<span class="icon solid fa-calculator"></span>
+										<strong>Assembly</strong> Binary Calc
+									</li>
+									<li class="style3">
+										<span class="icon solid fa-search"></span>
+										<strong>C++</strong> Mini Google
+									</li>
+									<li class="style4">
+										<span class="icon solid fa-gamepad"></span>
+										<strong>Java</strong> Hangman Game
+									</li>
+								</ul>
+								<footer class="major">
+									<p>Projects include real-time pulse monitoring using Arduino, low-level memory management in x86 Assembly, and advanced data structures for search engine simulation.</p>
+								</footer>
+							</section>
 
-        h2 {
-            font-size: 1.5rem;
-            margin-bottom: 25px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
+						<section id="skills" class="main special">
+								<header class="major">
+									<h2>Technical Expertise</h2>
+								</header>
+								<div class="table-wrapper">
+									<table>
+										<thead>
+											<tr>
+												<th>Category</th>
+												<th>Technologies & Tools</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td><strong>Programming</strong></td>
+												<td>C++, Java, Python, Assembly (x86)</td>
+											</tr>
+											<tr>
+												<td><strong>Core Knowledge</strong></td>
+												<td>OOP, Data Structures, DBMS, AI Fundamentals, COAL</td>
+											</tr>
+											<tr>
+												<td><strong>Software/Tools</strong></td>
+												<td>Cisco Packet Tracer, Oracle DB, VS Code, Tinkercad</td>
+											</tr>
+											<tr>
+												<td><strong>Soft Skills</strong></td>
+												<td>Problem Solving, Project Management, Attention to Detail</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</section>
 
-        h2::after {
-            content: "";
-            height: 1px;
-            background: var(--card-bg);
-            flex-grow: 1;
-        }
+					</div>
 
-        /* Card Grid */
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-        }
+				<footer id="footer">
+						<section>
+							<h2>Reach Out</h2>
+							<p>I am eager to apply my technical knowledge in practical settings and collaborate on innovative software projects.</p>
+						</section>
+						<section>
+							<h2>Contact Details</h2>
+							<dl class="alt">
+								<dt>Location</dt>
+								<dd>Pakistan</dd>
+								<dt>Phone</dt>
+								<dd>03175031474</dd>
+								<dt>Email</dt>
+								<dd><a href="mailto:yashaakmal33@gmail.com">yashaakmal33@gmail.com</a></dd>
+							</dl>
+							<ul class="icons">
+								<li><a href="#" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
+								<li><a href="#" class="icon brands fa-linkedin alt"><span class="label">LinkedIn</span></a></li>
+							</ul>
+						</section>
+						<p class="copyright">&copy; Yasha Akmal. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+					</footer>
 
-        .card {
-            background: var(--card-bg);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 25px;
-            border-radius: 16px;
-            transition: transform 0.3s ease, border-color 0.3s ease;
-        }
+			</div>
 
-        .card:hover {
-            transform: translateY(-5px);
-            border-color: var(--accent);
-        }
+		<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
 
-        .card h3 {
-            color: var(--accent);
-            margin-bottom: 10px;
-            font-size: 1.2rem;
-        }
-
-        .card p {
-            color: var(--text-dim);
-            font-size: 0.95rem;
-        }
-
-        /* Tags */
-        .tags {
-            margin-top: 15px;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        .tag {
-            font-size: 0.75rem;
-            background: rgba(56, 189, 248, 0.1);
-            color: var(--accent);
-            padding: 4px 10px;
-            border-radius: 20px;
-            border: 1px solid rgba(56, 189, 248, 0.2);
-        }
-
-        /* Footer / Contact */
-        footer {
-            margin-top: 100px;
-            text-align: center;
-            padding: 40px;
-            border-top: 1px solid var(--card-bg);
-        }
-
-        .contact-link {
-            color: var(--text-main);
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 0.9rem;
-            transition: color 0.3s;
-        }
-
-        .contact-link:hover { color: var(--accent); }
-
-        @media (max-width: 600px) {
-            h1 { font-size: 2rem; }
-        }
-    </style>
-</head>
-<body>
-
-    <div class="container">
-        <header>
-            <h1>Yasha Akmal</h1>
-            <p class="tagline">Computer Science Student &bull; FJWU</p>
-        </header>
-
-        <section id="about">
-            <h2>About</h2>
-            <div class="card" style="width: 100%;">
-                <p>A motivated Computer Science student passionate about solving real-world problems through technology. Focused on software development, low-level programming, and building efficient data structures.</p>
-            </div>
-        </section>
-
-        <section id="projects">
-            <h2>Projects</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>Mini Google Pro</h3>
-                    <p>Integrated search engine using advanced DSA for rapid indexing and keyword optimization.</p>
-                    <div class="tags">
-                        <span class="tag">C++</span>
-                        <span class="tag">DSA</span>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <h3>Binary Calculator</h3>
-                    <p>Functional x86 Assembly-based calculator supporting arithmetic and logical operations.</p>
-                    <div class="tags">
-                        <span class="tag">Assembly</span>
-                        <span class="tag">EMU8086</span>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <h3>Heart Rate Monitor</h3>
-                    <p>Real-time pulse monitoring system using Arduino hardware and signal processing.</p>
-                    <div class="tags">
-                        <span class="tag">Arduino</span>
-                        <span class="tag">Embedded</span>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <h3>Hangman OOP</h3>
-                    <p>Interactive game applying core Java principles like encapsulation and inheritance.</p>
-                    <div class="tags">
-                        <span class="tag">Java</span>
-                        <span class="tag">OOP</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="skills">
-            <h2>Skills</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>Programming</h3>
-                    <div class="tags">
-                        <span class="tag">C++</span><span class="tag">Java</span><span class="tag">Python</span><span class="tag">Assembly</span>
-                    </div>
-                </div>
-                <div class="card">
-                    <h3>Tools</h3>
-                    <div class="tags">
-                        <span class="tag">VS Code</span><span class="tag">Oracle DB</span><span class="tag">Packet Tracer</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <footer>
-            <p>Let's Connect</p>
-            <div style="margin-top: 20px;">
-                <a href="mailto:yashaakmal33@gmail.com" class="contact-link">Email</a>
-                <a href="#" class="contact-link">GitHub</a>
-                <a href="#" class="contact-link">LinkedIn</a>
-            </div>
-            <p style="margin-top: 40px; font-size: 0.8rem; color: var(--text-dim);">© 2026 Yasha Akmal</p>
-        </footer>
-    </div>
-
-</body>
+	</body>
 </html>
