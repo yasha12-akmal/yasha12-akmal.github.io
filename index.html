@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Yasha Akmal – Portfolio</title>
+<title>Yasha Akmal – Resume</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -15,212 +15,445 @@
     --line: #d9cfc4;
     --accent: #c9713a;
   }
+  @page { size: A4; margin: 0; }
   body {
     font-family: 'Cormorant Garamond', Georgia, serif;
     background: var(--warm);
     color: var(--ink);
-    padding: 40px 20px;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
+    align-items: flex-start;
+    padding: 0;
   }
-  .portfolio-container {
-    width: 100%;
-    max-width: 1000px;
+  .page {
+    width: 210mm;
+    min-height: 297mm;
     background: #fdfaf6;
-    box-shadow: 0 8px 60px rgba(0,0,0,0.1);
     position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 60px rgba(0,0,0,0.18);
   }
   .top-bar {
-    height: 8px;
-    background: linear-gradient(90deg, var(--rust), var(--accent), #e8a87c);
+    height: 6px;
+    background: linear-gradient(90deg, var(--rust) 0%, var(--accent) 50%, #e8a87c 100%);
+  }
+  .page::before {
+    content: '';
+    position: absolute;
+    left: 220px;
+    top: 6px;
+    bottom: 0;
+    width: 1px;
+    background: var(--line);
+    z-index: 0;
+  }
+  .layout {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    min-height: calc(297mm - 6px);
   }
 
-  /* HORIZONTAL HEADER */
-  header {
-    padding: 60px 50px 40px;
+  /* SIDEBAR */
+  .sidebar {
+    background: #f5ede0;
+    padding: 36px 24px 80px 28px;
+    position: relative;
+    z-index: 1;
+  }
+  .monogram {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--rust), var(--accent));
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  .monogram span {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 1px;
+  }
+  .sidebar-section { margin-bottom: 26px; }
+  .sidebar-title {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--rust);
+    margin-bottom: 12px;
+    padding-bottom: 6px;
     border-bottom: 1px solid var(--line);
   }
-  .name-block h1 {
-    font-size: 48px;
-    font-weight: 300;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    color: var(--ink);
+  .contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 9px;
   }
-  .name-block h1 em { font-style: italic; font-weight: 600; color: var(--rust); }
+  .contact-icon { font-size: 10px; margin-top: 3px; color: var(--rust); flex-shrink: 0; }
+  .contact-text {
+    font-size: 11px;
+    line-height: 1.5;
+    color: var(--ink);
+    font-weight: 300;
+    word-break: break-all;
+  }
+  .skill-group { margin-bottom: 12px; }
+  .skill-tag {
+    display: inline-block;
+    font-size: 10.5px;
+    font-weight: 400;
+    color: var(--ink);
+    background: rgba(184, 92, 56, 0.1);
+    border: 1px solid rgba(184, 92, 56, 0.25);
+    border-radius: 2px;
+    padding: 2px 7px;
+    margin: 2px 2px 2px 0;
+    line-height: 1.6;
+  }
+  .software-list {
+    font-size: 10.5px;
+    font-weight: 300;
+    color: var(--muted);
+    line-height: 1.9;
+    font-family: 'DM Mono', monospace;
+  }
+
+  /* MAIN */
+  .main {
+    padding: 36px 36px 80px 32px;
+    position: relative;
+    z-index: 1;
+  }
+  .name-block {
+    margin-bottom: 28px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--ink);
+    position: relative;
+  }
+  .name-block::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 60px;
+    height: 2px;
+    background: var(--rust);
+  }
+  h1 {
+    font-size: 38px;
+    font-weight: 300;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    line-height: 1;
+    color: var(--ink);
+    margin-bottom: 5px;
+  }
+  h1 em {
+    font-style: italic;
+    font-weight: 600;
+    color: var(--rust);
+  }
   .tagline {
     font-family: 'DM Mono', monospace;
-    font-size: 11px;
+    font-size: 9.5px;
     letter-spacing: 2px;
     color: var(--muted);
-    margin-top: 10px;
+    text-transform: uppercase;
   }
-  .contact-info {
-    text-align: right;
-    font-family: 'DM Mono', monospace;
-    font-size: 12px;
-    line-height: 1.8;
-  }
-
-  /* SECTION STYLING */
-  .content-section {
-    padding: 40px 50px;
-    border-bottom: 1px solid var(--line);
-  }
+  .section { margin-bottom: 24px; }
   .section-header {
     display: flex;
     align-items: center;
-    gap: 15px;
-    margin-bottom: 25px;
+    gap: 10px;
+    margin-bottom: 14px;
   }
-  .section-num { font-family: 'DM Mono', monospace; color: var(--rust); font-size: 12px; }
-  .section-title { font-size: 16px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; }
-  .section-line { flex: 1; height: 1px; background: var(--line); }
-
-  /* HORIZONTAL SKILLS GRID */
-  .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 30px;
-  }
-  .skill-category-title {
+  .section-num {
     font-family: 'DM Mono', monospace;
-    font-size: 10px;
-    text-transform: uppercase;
+    font-size: 9px;
     color: var(--rust);
-    margin-bottom: 15px;
-    border-bottom: 1px solid var(--line);
-    padding-bottom: 5px;
+    letter-spacing: 1px;
   }
-  .skill-tag {
-    display: inline-block;
+  .section-title {
     font-size: 12px;
-    background: rgba(184, 92, 56, 0.08);
-    border: 1px solid rgba(184, 92, 56, 0.2);
-    padding: 4px 10px;
-    margin: 3px;
-    border-radius: 3px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--ink);
   }
-
-  /* HORIZONTAL PROJECTS */
-  .projects-container {
+  .section-line { flex: 1; height: 1px; background: var(--line); }
+  .objective-text {
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 1.85;
+    color: var(--ink);
+    font-style: italic;
+    padding-left: 14px;
+    border-left: 3px solid var(--rust);
+  }
+  .edu-entry {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
+    grid-template-columns: 1fr auto;
+    gap: 8px;
+    margin-bottom: 13px;
+    padding-bottom: 13px;
+    border-bottom: 1px dashed var(--line);
+  }
+  .edu-entry:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .edu-degree { font-size: 13.5px; font-weight: 600; color: var(--ink); margin-bottom: 2px; }
+  .edu-school { font-size: 11.5px; font-weight: 300; color: var(--muted); font-style: italic; }
+  .edu-badge {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    color: var(--rust);
+    background: rgba(184,92,56,0.08);
+    border: 1px solid rgba(184,92,56,0.2);
+    padding: 3px 8px;
+    border-radius: 2px;
+    white-space: nowrap;
+    align-self: flex-start;
+    margin-top: 2px;
+  }
+  .edu-note {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    color: var(--accent);
+    margin-top: 4px;
   }
   .project-entry {
-    padding: 20px;
-    border: 1px solid var(--line);
-    transition: 0.3s ease;
+    margin-bottom: 20px;
+    padding-left: 12px;
+    border-left: 2px solid var(--line);
   }
-  .project-entry:hover { border-color: var(--rust); background: #fffcf9; }
-  .project-name { font-size: 18px; font-weight: 600; margin-bottom: 10px; color: var(--ink); }
-  .project-desc { font-size: 14px; line-height: 1.6; color: var(--muted); margin-bottom: 15px; }
-  
+  .project-name { font-size: 14px; font-weight: 600; color: var(--ink); margin-bottom: 5px; }
+  .project-desc { font-size: 12.5px; font-weight: 300; line-height: 1.8; color: var(--muted); }
+  .project-tech { margin-top: 7px; display: flex; flex-wrap: wrap; gap: 6px; }
   .tech-pill {
     font-family: 'DM Mono', monospace;
-    font-size: 10px;
+    font-size: 9px;
     color: var(--rust);
-    border: 1px solid rgba(184, 92, 56, 0.3);
+    border: 1px solid rgba(184,92,56,0.3);
     padding: 2px 8px;
-    border-radius: 12px;
-    margin-right: 5px;
+    border-radius: 10px;
   }
-
-  footer {
-    padding: 30px 50px;
+  .resume-footer {
+    position: absolute;
+    bottom: 18px;
+    left: 0;
+    right: 0;
     display: flex;
     justify-content: space-between;
-    font-family: 'DM Mono', monospace;
-    font-size: 10px;
-    color: var(--muted);
+    align-items: center;
+    padding: 0 36px 0 28px;
   }
-
-  @media (max-width: 768px) {
-    header, .projects-container { flex-direction: column; grid-template-columns: 1fr; text-align: left; }
-    .contact-info { text-align: left; margin-top: 20px; }
+  .footer-text {
+    font-family: 'DM Mono', monospace;
+    font-size: 8px;
+    color: var(--line);
+    letter-spacing: 1px;
+  }
+  .footer-dot { width: 4px; height: 4px; border-radius: 50%; background: var(--rust); opacity: 0.4; }
+  @media print {
+    body { padding: 0; background: white; }
+    .page { box-shadow: none; width: 210mm; min-height: 297mm; }
   }
 </style>
 </head>
 <body>
-
-<div class="portfolio-container">
+<div class="page">
   <div class="top-bar"></div>
-  
-  <header>
-    <div class="name-block">
-      <h1>Yasha <em>Akmal</em></h1>
-      <div class="tagline">Computer Science Student · Fatima Jinnah Women University</div>
-    </div>
-    <div class="contact-info">
-      yashaakmal33@gmail.com<br>
-      03175031474<br>
-      Pakistan
-    </div>
-  </header>
+  <div class="layout">
 
-  <section class="content-section">
-    <div class="section-header">
-      <span class="section-num">01</span>
-      <span class="section-title">Technical Toolkit</span>
-      <div class="section-line"></div>
-    </div>
-    <div class="skills-grid">
-      <div>
-        <div class="skill-category-title">Programming</div>
-        <span class="skill-tag">C++</span>
-        <span class="skill-tag">Java</span>
-        <span class="skill-tag">Python</span>
-        <span class="skill-tag">Assembly</span>
-      </div>
-      <div>
-        <div class="skill-category-title">Core Knowledge</div>
-        <span class="skill-tag">OOP</span>
-        <span class="skill-tag">Data Structures</span>
-        <span class="skill-tag">DBMS</span>
-        <span class="skill-tag">AI Fundamentals</span>
-      </div>
-      <div>
-        <div class="skill-category-title">Software</div>
-        <span class="skill-tag">VS Code</span>
-        <span class="skill-tag">Oracle DB</span>
-        <span class="skill-tag">Cisco Tracer</span>
-      </div>
-    </div>
-  </section>
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="monogram"><span>YA</span></div>
 
-  <section class="content-section">
-    <div class="section-header">
-      <span class="section-num">02</span>
-      <span class="section-title">Academic Projects</span>
-      <div class="section-line"></div>
-    </div>
-    <div class="projects-container">
-      <div class="project-entry">
-        <div class="project-name">Mini Google Pro v2.0</div>
-        <p class="project-desc">A sophisticated search engine simulation utilizing advanced data structures for indexing and rapid retrieval[cite: 48, 49].</p>
-        <div class="project-tech">
-          <span class="tech-pill">C++</span> <span class="tech-pill">DSA</span>
+      <div class="sidebar-section">
+        <div class="sidebar-title">Contact</div>
+        <div class="contact-item">
+          <span class="contact-icon">✉</span>
+          <span class="contact-text">yashaakmal33@gmail.com</span>
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon">☏</span>
+          <span class="contact-text">03175031474</span>
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon">◉</span>
+          <span class="contact-text">Pakistan</span>
         </div>
       </div>
-      <div class="project-entry">
-        <div class="project-name">Binary Calculator</div>
-        <p class="project-desc">Designed a functional calculator using Assembly Language, supporting binary arithmetic and memory management[cite: 46, 47].</p>
-        <div class="project-tech">
-          <span class="tech-pill">x86</span> <span class="tech-pill">Assembly</span>
+
+      <div class="sidebar-section">
+        <div class="sidebar-title">Languages</div>
+        <div class="skill-group">
+          <div class="skill-tag">English</div>
+          <div class="skill-tag">Urdu</div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <footer>
-    <span>YASHA AKMAL // 2026</span>
-    <span>COMPUTER SCIENCE PORTFOLIO</span>
-  </footer>
+      <div class="sidebar-section">
+        <div class="sidebar-title">Programming</div>
+        <div class="skill-group">
+          <div class="skill-tag">C++</div>
+          <div class="skill-tag">Java</div>
+          <div class="skill-tag">Python</div>
+          <div class="skill-tag">Assembly</div>
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-title">Core Knowledge</div>
+        <div class="skill-group">
+          <div class="skill-tag">OOP</div>
+          <div class="skill-tag">Data Structures</div>
+          <div class="skill-tag">DBMS</div>
+          <div class="skill-tag">Computer Networks</div>
+          <div class="skill-tag">Digital Logic Design</div>
+          <div class="skill-tag">AI Fundamentals</div>
+          <div class="skill-tag">COAL</div>
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-title">Tools & Software</div>
+        <div class="software-list">
+          Cisco Packet Tracer<br>
+          Tinkercad<br>
+          Oracle DB<br>
+          Eclipse IDE<br>
+          VS Code<br>
+          Anaconda Navigator
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-title">Soft Skills</div>
+        <div class="skill-tag">Team Player</div>
+        <div class="skill-tag">Attention to Detail</div>
+        <div class="skill-tag">Problem Solving</div>
+        <div class="skill-tag">Project Management</div>
+        <div class="skill-tag">Quick Learner</div>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main">
+
+      <div class="name-block">
+        <h1>Yasha <em>Akmal</em></h1>
+        <div class="tagline">Computer Science Student &nbsp;·&nbsp; Fatima Jinnah Women University</div>
+      </div>
+
+      <!-- OBJECTIVE -->
+      <div class="section">
+        <div class="section-header">
+          <span class="section-num">01</span>
+          <span class="section-title">Objective</span>
+          <div class="section-line"></div>
+        </div>
+        <p class="objective-text">
+          A motivated Computer Science student with a strong academic foundation and hands-on experience with industry tools. Passionate about solving real-world problems through technology, eager to apply classroom knowledge in practical settings, and committed to growing as a software developer.
+        </p>
+      </div>
+
+      <!-- EDUCATION -->
+      <div class="section">
+        <div class="section-header">
+          <span class="section-num">02</span>
+          <span class="section-title">Education</span>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="edu-entry">
+          <div>
+            <div class="edu-degree">BS Computer Science</div>
+            <div class="edu-school">Fatima Jinnah Women University</div>
+            <div class="edu-note">▸ Currently enrolled · 4th Semester</div>
+          </div>
+          <div class="edu-badge">2024 – 2028</div>
+        </div>
+
+        <div class="edu-entry">
+          <div>
+            <div class="edu-degree">Intermediate</div>
+            <div class="edu-school">Superior College</div>
+          </div>
+          <div class="edu-badge">Completed</div>
+        </div>
+
+        <div class="edu-entry">
+          <div>
+            <div class="edu-degree">Matriculation</div>
+            <div class="edu-school">Toddlers Shine High School</div>
+          </div>
+          <div class="edu-badge">Completed</div>
+        </div>
+      </div>
+
+      <!-- PROJECTS -->
+      <div class="section">
+        <div class="section-header">
+          <span class="section-num">03</span>
+          <span class="section-title">Academic Projects</span>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="project-entry">
+          <div class="project-name">Heart Rate Monitor using Arduino [DLD]</div>
+          <div class="project-desc">Developed a real-time pulse monitoring system using hardware sensors and Arduino. Focused on signal processing and circuit logic to display accurate heart rate data.</div>
+          <div class="project-tech">
+            <span class="tech-pill">Arduino</span>
+            <span class="tech-pill">Microcontrollers</span>
+            <span class="tech-pill">Sensors</span>
+            <span class="tech-pill">Embedded Systems</span>
+          </div>
+        </div>
+
+        <div class="project-entry">
+          <div class="project-name">Binary Calculator [COAL]</div>
+          <div class="project-desc">Designed and implemented a functional calculator using Assembly Language. Supports binary arithmetic, logical operations, and low-level memory management.</div>
+          <div class="project-tech">
+            <span class="tech-pill">Assembly (x86)</span>
+            <span class="tech-pill">EMU8086</span>
+            <span class="tech-pill">Low-level Prog.</span>
+          </div>
+        </div>
+
+        <div class="project-entry">
+          <div class="project-name">Mini Google Pro v2.0 – Integrated Search Engine [DSA]</div>
+          <div class="project-desc">A sophisticated search engine simulation utilizing advanced data structures for indexing and rapid retrieval. Features keyword optimization and ranked results.</div>
+          <div class="project-tech">
+            <span class="tech-pill">C++</span>
+            <span class="tech-pill">Data Structures</span>
+            <span class="tech-pill">Algorithms</span>
+          </div>
+        </div>
+
+        <div class="project-entry">
+          <div class="project-name">Hangman Game Program [OOP]</div>
+          <div class="project-desc">Built an interactive word-guessing game applying core OOP principles like encapsulation and inheritance. Includes dynamic word lists and score tracking.</div>
+          <div class="project-tech">
+            <span class="tech-pill">Java</span>
+            <span class="tech-pill">OOP</span>
+            <span class="tech-pill">Eclipse IDE</span>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <div class="resume-footer">
+    <span class="footer-text">YASHA AKMAL &nbsp;·&nbsp; RESUME 2025</span>
+    <span class="footer-dot"></span>
+    <span class="footer-text">yashaakmal33@gmail.com</span>
+  </div>
 </div>
-
 </body>
 </html>
